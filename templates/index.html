@@ -1,0 +1,247 @@
+<!-- 
+Jacob Choi
+Compost Recycling/Trash Classifier
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Green Been</title>
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="icon" href="https://i.ibb.co/VTMZqp1/Untitled-1.png"> </head>
+
+<body class="body1">
+	<div class="container4">
+
+		<section class="one">
+
+			<section class="container"> <img src="https://i.ibb.co/pXgqQjR/green.png" id="logo" class="img-fluid" alt="Responsive image"> </section>
+			<section class="container2">
+				<h2>
+
+					<form action="prediction" method="POST" enctype="multipart/form-data" onchange="loadFile(event)">
+						<input type="file" class="btn btn-outline-success btn-lg mbtn-block" id="customFile" name="img"/ accept="image/*" required >
+						<button type="submit" class="btn btn-success btn-lg" name="btn">Submit</button>
+					</form>
+
+					<br>
+
+					<!-- image preview -->
+<img id="output"/>
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  };
+</script>
+</h2>
+				<!-- End Image preview -->
+				<h1 id='predictText'>You should {{data}} your item.</h1> </section>
+		</section>
+		<section class="two">
+			<section class="container3">
+				<!-- sources
+			https://ag-recycle.com/much-waste-wasted-landfills/
+			https://www.nytimes.com/2017/06/02/nyregion/compost-organic-recycling-new-york-city.html
+			https://smartasset.com/mortgage/the-economics-of-composting
+			 -->
+				<h1>Why this matters</h1>
+				<p>In 2012, a Yale Research Team found that organic waste occupied the largest percentage of what’s being dumped into landfills. Compost in landfills is not only harmful environmentally, but also economically. For example, it costs New York City over $400 million to collect and dispose the trash it collects, but they could be saving millions as the majority of the trash is actually organic matter. Organic material brought to landfills rot and release methane which is not ideal as it is more than 25 times as potent as carbon dioxide (epa.gov). On the other hand, composting brings carbon to the soil and limits methane. Getting into composting can be daunting and part of the process is knowing what to compost. Green Been was created to solve this problem; it uses a tensorflow deep learning model to predict whether or not you should compost your item. The model takes into account many factors, for example, paper can be both composted and recycled, but it is overall (based on supply and demand) more economically/environmentally efficient to recycle.</p>
+				<section class="three">
+					<h1>How this model was made</h1>
+					<p>The custom model created for Green Been, was created using Tensorflow and has a total of 9 layers and has around 10,000 trainable parameters. The data used to train the model was adapted from Kaggle</p> <img src="https://i.ibb.co/nfWVxNP/neural-network-image.png
+" alt="Neural" class="nnimg" class="img-fluid" alt="Responsive image"> </section>
+			</section>
+</body>
+</class>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<style>
+	.nnimg {
+	height: 71vh;
+	width: 134vh;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+</style>
+
+</html>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: rubik;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+}
+
+h2 {
+	color: white;
+	text-align: center;
+}
+
+h3 {
+	color: white;
+	text-align: center;
+}
+
+p {
+	color: white;
+	text-align: center;
+}
+
+section {
+	height: 100vh;
+}
+
+.body1 {
+	background-color: #718387;
+}
+
+#customFile {
+	border-radius: 5px;
+}
+
+#logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	width: 1000px;
+	/*   -webkit-filter: drop-shadow(0px 0px 5px rgba(13, 250, 102, 0.5));
+    filter: drop-shadow(12px 12px 7px rgba(255, 217, 0, 0.5));*/
+}
+
+.btn-success {
+	background-color: #587850;
+	/*	color:#FFF; */
+}
+
+.btn-outline-success {
+	background-color: #587850;
+	color: #FFFFFF
+}
+
+#logo {
+	animation: fadeIn 5s;
+	-webkit-animation: fadeIn 5s;
+	-moz-animation: fadeIn 5s;
+	-o-animation: fadeIn 5s;
+	-ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50vh;
+}
+
+
+}
+.container3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #71877f;
+}
+
+/*Resize preview image*/
+#output {
+	max-width: 16vh;
+	max-height: 16vh;
+}
+
+
+
+
+/*Scroll Effect*/
+.one {
+	background-color: #78B0A0;
+	;
+}
+.two {
+	background-color: #4AA96C;
+}
+.three {
+	background-color: #564A4A;
+}
+.container4 {
+	scroll-snap-type: mandatory;
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+}
+.one {
+	scroll-snap-align: end;
+	height: 100vh;
+}
+.two,
+.three {
+	scroll-snap-align: end;
+	height: 100vh;
+}
+.three {
+	scroll-snap-align: end;
+	height: 100vh;
+}
+#predictText {
+	font-size: 50px;
+}
+</style>
