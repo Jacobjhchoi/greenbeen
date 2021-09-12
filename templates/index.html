@@ -3,8 +3,159 @@ Jacob Choi
 Compost Recycling/Trash Classifier
  -->
 <!DOCTYPE html>
-<html>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: rubik;
+}
 
+h1 {
+	color: white;
+	text-align: center;
+}
+
+h2 {
+	color: white;
+	text-align: center;
+}
+
+h3 {
+	color: white;
+	text-align: center;
+}
+
+p {
+	color: white;
+	text-align: center;
+}
+
+section {
+	height: 100vh;
+}
+
+.body1 {
+	background-color: #718387;
+}
+
+#customFile {
+	border-radius: 5px;
+}
+
+#logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	width: 1000px;
+	/*   -webkit-filter: drop-shadow(0px 0px 5px rgba(13, 250, 102, 0.5));
+    filter: drop-shadow(12px 12px 7px rgba(255, 217, 0, 0.5));*/
+}
+
+.btn-success {
+	background-color: #587850;
+	/*	color:#FFF; */
+}
+
+.btn-outline-success {
+	background-color: #587850;
+	color: #FFFFFF
+}
+
+#logo {
+	animation: fadeIn 5s;
+	-webkit-animation: fadeIn 5s;
+	-moz-animation: fadeIn 5s;
+	-o-animation: fadeIn 5s;
+	-ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50vh;
+}
+
+
+}
+.container3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #71877f;
+}
+
+/*Resize preview image*/
+#output {
+	max-width: 16vh;
+	max-height: 16vh;
+}
+
+
+
+
+
+.one {
+	background-color: #78B0A0;
+	;
+}
+.two {
+	background-color: #4AA96C;
+}
+.three {
+	background-color: #564A4A;
+</style>
+<html>
 <head>
 	<title>Green Been</title>
 	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -22,7 +173,7 @@ Compost Recycling/Trash Classifier
 				<h2>
 
 					<form action="prediction" method="POST" enctype="multipart/form-data" onchange="loadFile(event)">
-						<input type="file" class="btn btn-outline-success btn-lg mbtn-block" id="customFile" name="img"/ accept="image/*" required >
+						<input type="file" class="btn btn-outline-success btn-lg mbtn-block" id="customFile" name="img"/ accept="image/*" required>
 						<button type="submit" class="btn btn-success btn-lg" name="btn">Submit</button>
 					</form>
 
@@ -70,6 +221,7 @@ Compost Recycling/Trash Classifier
 </style>
 
 </html>
+
 <style>
 * {
 	margin: 0;
