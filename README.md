@@ -20,5 +20,4 @@ I am proud to have created a fully functioning web application with an everyday 
 ## What I learned
 I learned a lot about flask, and how to deploy machine learning models using it. Additionally, I learned how to better use HTML forms, CSS, as well as Manim to create a neural network animation at 0:57 in the video.
 
-## The future of Green Been
-Althought Green Been already can be used on IPhones/androids (via the browser), I plan to create an app, so that Green Been will be more easily usable.   Additionally, I plan on further improving the model's accuracy with more fine-tuning/data.
+If you want to test out the application, check out https://greenbeen.herokuapp.com/
